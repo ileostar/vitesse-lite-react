@@ -10,7 +10,7 @@ import Unocss from 'unocss/vite'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
+      '@/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
   plugins: [
@@ -28,6 +28,8 @@ export default defineConfig({
       imports: [
         'react',
         'react-router-dom',
+        'mobx',
+        'mobx-react-lite',
         { 'usehooks-ts': ['useCounter', 'useDarkMode'] },
       ],
       dts: true,
